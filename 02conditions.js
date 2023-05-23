@@ -30,6 +30,15 @@ console.log(findMaximum(40, 20, 30));
 
 //III.IdenticalDice
 
+function thrownDice() {
+  let dice1 = Math.floor(Math.random() * 6 + 1);
+  let dice2 = Math.floor(Math.random() * 6 + 1);
+  let dice3 = Math.floor(Math.random() * 6 + 1);
+
+  console.log(dice1, dice2, dice3);
+}
+console.log(thrownDice());
+
 // IV.DaysNumber
 
 function dayName(dayNumber) {
