@@ -1,56 +1,39 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Conditions </title>
-</head>
+// I.CinemaTarifs
 
-<body>
-  
-  <h1> 02 Conditions </h1>
-    <script>
-
-        I.CinemaTarifs
-
-        function reducedTarifs(age) {
+function reducedTarifs(age) {
   const fullPrice = 10;
   const reducedPrice = 8;
 
-  if (age >= 18) {
+  if (age <= 18) {
     console.log(`Price: €${reducedPrice}`);
   } else {
     console.log(`Price: €${fullPrice}`);
   }
 }
+console.log(reducedTarifs(17));
+console.log(reducedTarifs(20));
 
+//II. Maximum
 
-     II. Maximum
+function findMaximum(a, b, c) {
+  let maximum = a;
+  if (b > a) {
+    maximum = b;
+  }
+  if (c > maximum) {
+    maximum = c;
+  }
+  return maximum;
+}
 
-     function findMaximum (a,b,c) {
-        let maximum = a;
-        if (b > a) {
-            maximum = b;
-        }
-        if (c > maximum) {
-            maximum=c;
+console.log(findMaximum(40, 20, 30));
 
-        }
-        return maximum;
+//III.IdenticalDice
 
-        console.log(findMaximum)
-        }
-     
-        III.IdenticalDice
+// IV.DaysNumber
 
-
-
-
-        IV.DaysNumber
-
-        function dayName (dayNumber) {
-
-switch (dayNumber) {
+function dayName(dayNumber) {
+  switch (dayNumber) {
     case 1:
       dayName = "Monday";
       break;
@@ -71,14 +54,15 @@ switch (dayNumber) {
       break;
     case 7:
       dayName = "Sunday";
-      break; }
+      break;
+  }
 
-       return dayName; 
-    }
+  return dayName;
+}
 
-    V.PrintShop
+// V.PrintShop
 
-    function PrintPrice(numCopies) {
+function PrintPrice(numCopies) {
   let totalPrice;
 
   if (numCopies <= 10) {
@@ -92,33 +76,9 @@ switch (dayNumber) {
     const firstTenPrice = 10 * 0.12;
     const nextTwentyPrice = 20 * 0.11;
     const remainingCopies = numCopies - 30;
-    const additionalPrice = remainingCopies * 0.10;
+    const additionalPrice = remainingCopies * 0.1;
     totalPrice = firstTenPrice + nextTwentyPrice + additionalPrice;
   }
 
   return totalPrice;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
-</body>
-</html>
