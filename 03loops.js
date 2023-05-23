@@ -50,7 +50,19 @@ printNumbersUpToRandom();
 
 //III - throw dices
 
-//Write an algorithm which throws a dice a given number of time and count the number of time a certain number is received.
+function countDiceOccurrences(numThrows, targetNumber) {
+  var count = 0;
+
+  for (var i = 0; i < numThrows; i++) {
+    var diceNumber = Math.floor(Math.random() * 6) + 1;
+
+    if (diceNumber === targetNumber) {
+      count++;
+    }
+  }
+
+  return count;
+}
 
 //IV - even numbers
 
@@ -61,5 +73,21 @@ for (let i = 0; i <= 10; i++) {
 for (let i = 0; i < 10; i += 2) {
   console.log(i);
 }
+
 //V - perfect number
-//Write an algorithm which verify if a given positive integer is a perfect number, meaning equal to the sum of his divisors (except himself).
+
+function isPerfectNumber(number) {
+  if (number <= 0) {
+    return false;
+  }
+
+  var sum = 0;
+
+  for (var i = 1; i < number; i++) {
+    if (number % i === 0) {
+      sum += i;
+    }
+  }
+
+  return sum === number;
+}
