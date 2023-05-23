@@ -37,22 +37,29 @@ for (let i = 1; i < z; i += 2) {
 
 //II.PrintRandomNumberOfIntegers
 
-//Write an algorithm which receives an random integer and prints from 0 to it.
-for (let i = 0; i; ++) {
-  const element = arr];
-  
+function printNumbersUpToRandom() {
+  var randomInteger = Math.floor(Math.random() * 10) + 1;
+  console.log("Random Integer: " + randomInteger);
+
+  for (var i = 0; i <= randomInteger; i++) {
+    console.log(i);
+  }
 }
+
+printNumbersUpToRandom();
 
 //III - throw dices
 
 //Write an algorithm which throws a dice a given number of time and count the number of time a certain number is received.
 
 //IV - even numbers
-//Write an algorithm which prints all the even numbers from 0 to a given number.
 
 for (let i = 0; i <= 10; i++) {
   if (i % 2 == 0) console.log(i);
 }
 
+for (let i = 0; i < 10; i += 2) {
+  console.log(i);
+}
 //V - perfect number
 //Write an algorithm which verify if a given positive integer is a perfect number, meaning equal to the sum of his divisors (except himself).
